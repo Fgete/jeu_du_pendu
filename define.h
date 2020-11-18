@@ -67,7 +67,7 @@ void DrawGame(){
 
     DrawPicture();
 
-    for (int i = 0; i < WORD_LENGTH; i++)
+    for (int i = 0; i < strlen(WORD); i++)
         printf(" %c", MORD[i]);
 
     printf("\n\nIl vous reste %d vies.\n", lifes);
@@ -83,7 +83,7 @@ void DrawGame(){
 // ANALYSE THE ENTERED CHARACTER
 void Analyse(char l){
     int letterFound = 0;
-    for (int i = 0; i < WORD_LENGTH; i++)
+    for (int i = 0; i < strlen(WORD); i++)
         if (l == WORD[i]){
             MORD[i] = l;
             letterFound = 1;
@@ -95,7 +95,7 @@ void Analyse(char l){
 // SET VICTORY
 void Victory(int *g){
     int isWinning = 1;
-    for (int i = 0; i < WORD_LENGTH; i++)
+    for (int i = 0; i < strlen(WORD); i++)
         if (MORD[i] == '_')
             isWinning = 0;
     if (isWinning == 1 || lifes < 1)
@@ -118,7 +118,7 @@ void EndTitle(int *g){
 
 // INIT MORD
 void Init(){
-    for (int i = 0; i < WORD_LENGTH; i++)
+    for (int i = 0; i < strlen(WORD); i++)
         MORD[i] = '_';
     lifes = 10;
 }
