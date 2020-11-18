@@ -8,7 +8,6 @@
 
 // CONSTANT
 const char WORD[8] = {'i','n','i','t','i','a','l','e'};
-const int WORD_LENGTH = 8;
 
 // VARIRABLE
 char MORD[8] = {'_','_','_','_','_','_','_','_'};
