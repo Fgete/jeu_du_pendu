@@ -3,6 +3,7 @@
 
 // HEADERS
 #include "define.h"
+#include "function.c"
 
 int main()
 {
