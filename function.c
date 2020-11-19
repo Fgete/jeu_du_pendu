@@ -2,10 +2,10 @@
 #include <string.h>
 
 // CONSTANT
-const char WORD[8] = {'i','n','i','t','i','a','l','e'};
+const char WORD[9] = {'i','n','i','t','i','a','l','e'};
 
 // VARIRABLE
-char MORD[8] = {'_','_','_','_','_','_','_','_'};
+char MORD[9] = {'_','_','_','_','_','_','_','_'};
 int lifes = 10;
 
 // PROTOTYPE
@@ -55,7 +55,7 @@ void Quit(){
 
 // DRAW THE GAME INTERFACE
 void DrawGame(){
-    char l;
+    char letter;
 
     system("cls");
 
@@ -68,18 +68,20 @@ void DrawGame(){
     printf("Proposez une lettre : ");
 
     fflush(stdin);
+    scanf("%c", &letter);
+    // letter = getchar();
+    printf("%c", letter);
 
-    l = getchar();
-
-    Analyse(l);
+    Analyse(letter);
 }
 
 // ANALYSE THE ENTERED CHARACTER
-void Analyse(char l){
+void Analyse(char letter){
     int letterFound = 0;
+    int lng = strlen(WORD);
     for (int i = 0; i < strlen(WORD); i++)
-        if (l == WORD[i]){
-            MORD[i] = l;
+        if (letter == WORD[i]){
+            MORD[i] = letter;
             letterFound = 1;
         }
     if (letterFound == 0)
@@ -94,6 +96,8 @@ void Victory(int *g){
             isWinning = 0;
     if (isWinning == 1 || lifes < 1)
         *g = 2;
+    else
+        *g = 1;
 }
 
 // END TITLE

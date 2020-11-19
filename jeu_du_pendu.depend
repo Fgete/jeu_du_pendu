@@ -1,9 +1,12 @@
 # depslib dependency file v1.0
-1605709345 source:c:\users\franc\desktop\cours\algo\git\jeu_du_pendu\jeu_du_pendu\main.c
+1605713479 source:c:\users\franc\desktop\cours\algo\git\jeu_du_pendu\jeu_du_pendu\main.c
 	<stdio.h>
 	<stdlib.h>
 	"define.h"
+	"function.c"
 
-1605711974 c:\users\franc\desktop\cours\algo\git\jeu_du_pendu\jeu_du_pendu\define.h
+1605713462 c:\users\franc\desktop\cours\algo\git\jeu_du_pendu\jeu_du_pendu\define.h
+
+1605785206 c:\users\franc\desktop\cours\algo\git\jeu_du_pendu\jeu_du_pendu\function.c
 	<string.h>
 

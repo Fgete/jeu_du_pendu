@@ -34,6 +34,10 @@
 		<Unit filename="define.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="function.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
