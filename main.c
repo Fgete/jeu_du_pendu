@@ -8,21 +8,23 @@
 int main()
 {
     int gameState = 0;
+    int lifes = 10;
+
+    char MORD[9] = {'_','_','_','_','_','_','_','_'};
 
     while (gameState != -1){
         switch(gameState){
         case 0:
             // MENU
-            MenuTitle(&gameState);
+            MenuTitle(&gameState, &lifes, MORD);
         break;
         case 1:
             // GAME
-            DrawGame();
-            Victory(&gameState);
+            Round(&gameState, &lifes, MORD);
         break;
         case 2:
             // END
-            EndTitle(&gameState);
+            EndTitle(&gameState, &lifes);
         break;
         }
     }
